@@ -3,7 +3,6 @@ seaborn>=0.13.2
 matplotlib>=3.8.4
 pandas>=2.2.1
 swig
-deepcave>=1.2
 scikit-learn>=0.24.0
 lightning>=2.2.2
 torch>=1.13.1
