@@ -6,4 +6,4 @@ API References
    :toctree: api
    :recursive:
 
-   <<package-name>>
+   hpi_for_mo

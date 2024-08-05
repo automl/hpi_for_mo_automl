@@ -1,6 +1,6 @@
 import automl_sphinx_theme
 
-from <<package-name>> import copyright, author, version, name
+from hpi_for_mo import copyright, author, version, name
 
 
 options = {
@@ -9,7 +9,7 @@ options = {
     "version": version,
     "name": name,
     "html_theme_options": {
-        "github_url": "https://github.com/<<organization>>/<<name>>",
+        "github_url": "https://github.com/automl/HPI_for_MO_AutoML",
         "twitter_url": "https://twitter.com/automl_org?lang=de",
     }
 }

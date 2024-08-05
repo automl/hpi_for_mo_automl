@@ -20,7 +20,7 @@ permissions:
   contents: write
 
 env:
-  name: <<name>>
+  name: HPI_for_MO_AutoML
 
 jobs:
   build-and-deploy:
