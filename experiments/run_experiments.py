@@ -3,7 +3,6 @@ from __future__ import annotations
 from argparse import ArgumentParser
 from datetime import datetime
 
-from aif360.sklearn.datasets import fetch_adult
 import torch
 from sklearn.datasets import load_digits
 from sklearn.model_selection import train_test_split
@@ -29,6 +28,7 @@ if __name__ == "__main__":
         smac_tuner = SMACTuner(X_train, y_train, X_test, y_test, objectives)
         print('time')
     if args.experiment_name == 'fair_loss':
+        from aif360.sklearn.datasets import fetch_adult
         data_train = fetch_adult(numeric_only=True, subset='train')
         data_test = fetch_adult(numeric_only=True, subset='test')
         objectives = ["1-accuracy", "fair_loss"]
@@ -36,7 +36,7 @@ if __name__ == "__main__":
     if args.experiment_name == 'energy':
         smac_tuner = SMACTunerResNet()
         objectives = ["1-accuracy", "energy"]
-        print('cuda avilable', torch.cuda.is_available())
+        print('cuda available', torch.cuda.is_available())
 
     # Define the smac scenario with the respective configspace, 10000 trials, and 50 epochs
     run_name = 'run_' + datetime.now().strftime("%m_%d_%H_%M")
