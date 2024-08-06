@@ -24,6 +24,9 @@ def read_runs(path):
                     print(subfolder, 'could not be read.')
                     print(e)
                     continue
+    if len(runs)==0:
+        print('Data could not be read.')
+        exit()
     return Group('group', runs)
 
 
