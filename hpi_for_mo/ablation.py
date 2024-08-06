@@ -21,7 +21,7 @@ def train_model(group, df, objective):
     Y = df[objective].to_numpy()
     regr = RandomForestRegressor(max_depth=100, random_state=0)
     regr.fit(X, Y)
-    print('error', mean_squared_error(Y, regr.predict(X)))
+    print('MSE of the surrogate model:', mean_squared_error(Y, regr.predict(X)))
     return regr
 
 
@@ -105,7 +105,6 @@ def calculate_ablation_path(group, df, objectives_normed, weighting, models):
     incumbent_cfg = group.get_config(df.iloc[incumbent_cfg_id]['config_id'])
     default_cfg = group.configspace.get_default_configuration()
     res_previous, var = predict_w_weight(group, default_cfg, models, weighting)
-    print('default', res_previous)
 
     cfg = copy.copy(default_cfg)
     df_abl = pd.DataFrame([])
