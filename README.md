@@ -15,7 +15,7 @@ pip install . -r requirements.txt
 ```
 
 ## Run the experiments:
-Choose between time, fair_loss and energy to reproduce the experiments.
+Choose between time, fair_loss and energy to run the experiments.
 ```
 python experiments/run_experiments.py --experiment_name time|fair_loss|energy
 ```
