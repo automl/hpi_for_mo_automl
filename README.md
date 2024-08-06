@@ -23,7 +23,7 @@ python experiments/run_experiments.py --experiment_name time|fair_loss|energy
 To calculate MO-HPI on the results of the experiments, run the following command. The ```in_path``` should lead to the folder containing a multi-objective Smac run, e.g., from the previous step. The ```out_path``` can be any path to where the plots will be saved. The ```objectives``` should be 1-accuracy and one of: time, fair_loss or energy. 
 
 ```
-pip install deepcave==1.2
+pip install deepcave==1.2.1
 python hpi_for_mo/main.py --in_path path_to_run --out_path path_to_save_plots --objectives 1-accuracy time|fair_loss|energy
 ```
 
