@@ -13,6 +13,7 @@ from lightning import Trainer
 
 from ResNet import LitResNet
 from lightning.pytorch.callbacks import EarlyStopping
+import torch
 
 
 class SMACTunerResNet:
