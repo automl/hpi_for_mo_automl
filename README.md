@@ -8,7 +8,7 @@ Hyperparameter optimization plays a pivotal role in enhancing the predictive per
 ```
 git clone https://github.com/automl/HPI_for_MO_AutoML.git
 cd HPI_for_MO_AutoML
-conda create -n hpi_for_mo python=3.9
+conda create -n hpi_for_mo python=3.10
 conda activate hpi_for_mo
 
 pip install . -r requirements.txt
