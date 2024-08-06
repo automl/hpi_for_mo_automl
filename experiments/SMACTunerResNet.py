@@ -52,7 +52,7 @@ class SMACTunerResNet:
             warnings.filterwarnings("ignore")
             net = LitResNet(config)
             print('start_training')
-            trainer = Trainer(devices=1, accelerator="gpu", check_val_every_n_epoch=2, num_sanity_val_steps=0,
+            trainer = Trainer(devices=1, accelerator="gpu" if torch.cuda.is_available() else "cpu", check_val_every_n_epoch=2, num_sanity_val_steps=0,
                               max_epochs=int(np.ceil(budget)),
                               enable_progress_bar=False, enable_checkpointing=False, callbacks=[EarlyStopping(monitor="test_acc", min_delta=0.00, patience=3, verbose=False, mode="max")])
 
