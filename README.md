@@ -11,11 +11,7 @@ cd HPI_for_MO_AutoML
 conda create -n hpi_for_mo python=3.9
 conda activate hpi_for_mo
 
-# Install for usage
 pip install . -r requirements.txt
-
-# Install for development
-make install-dev
 ```
 
 ## Run the experiments:
