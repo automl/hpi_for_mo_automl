@@ -64,13 +64,13 @@ def plot(df_fanova, df_ablated, objectives_normed, out_path, df, hps, default):
     ax2.set_title('MO-fANOVA')
 
     #no pareto x axis
-    # ax2.set_xticks([0, 0.2, 0.4, 0.6, 0.8, 1.0],
-    #                [objectives_normed[1].split('_normed')[0], '0.2', '0.4', '0.6', '0.8', 'Error'])
+    ax2.set_xticks([0, 0.2, 0.4, 0.6, 0.8, 1.0],
+                   [objectives_normed[1].split('_normed')[0], '0.2', '0.4', '0.6', '0.8', 'Error'])
 
     # pareto x axis
-    x_ticks = sorted(list(df_fanova[weight].apply(lambda x: round(x*100)/100).unique()))
-    ax2.set_xticks(x_ticks,
-                   [objectives_normed[1].split('_normed')[0]] + x_ticks[1:-1] + ['Error'], rotation=90)
+    # x_ticks = sorted(list(df_fanova[weight].apply(lambda x: round(x*100)/100).unique()))
+    # ax2.set_xticks(x_ticks,
+    #                [objectives_normed[1].split('_normed')[0]] + x_ticks[1:-1] + ['Error'], rotation=90)
     ax2.get_legend().remove()
 
     # ablation
