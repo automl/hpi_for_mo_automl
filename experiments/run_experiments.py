@@ -53,7 +53,7 @@ if __name__ == "__main__":
     )
 
     # create a random configuration sampler that trains the configurations
-    multi_objective_algorithm = ParEGO(scenario)
+    multi_objective_algorithm = ParEGO(scenario, seed=scenario.seed)
     initial_design = RandomFacade.get_initial_design(scenario)
     intensifier = RandomFacade.get_intensifier(scenario, max_config_calls=1)
     smac = RandomFacade(
