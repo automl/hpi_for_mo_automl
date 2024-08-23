@@ -92,13 +92,13 @@ def plot(df_fanova, df_ablated, objectives_normed, out_path, df, hps, default):
     ax3.set_title('MO-Ablation Path Analysis')
 
     #no pareto x axis
-    # ax3.set_xticks([0, 0.2, 0.4, 0.6, 0.8, 1.0],
-    #                [objectives_normed[1].split('_normed')[0], '0.2', '0.4', '0.6', '0.8', 'Error'])
+    ax3.set_xticks([0, 0.2, 0.4, 0.6, 0.8, 1.0],
+                   [objectives_normed[1].split('_normed')[0], '0.2', '0.4', '0.6', '0.8', 'Error'])
 
     # pareto x axis
-    x_ticks = sorted(list(df_ablated[weight].apply(lambda x: round(x * 100) / 100).unique()))
-    ax3.set_xticks(x_ticks,
-                   [objectives_normed[1].split('_normed')[0]] + x_ticks[1:-1] + ['Error'], rotation=90)
+    # x_ticks = sorted(list(df_ablated[weight].apply(lambda x: round(x * 100) / 100).unique()))
+    # ax3.set_xticks(x_ticks,
+    #                [objectives_normed[1].split('_normed')[0]] + x_ticks[1:-1] + ['Error'], rotation=90)
 
     handles, labels = ax3.get_legend_handles_labels()
     ax3.legend(handles, labels, loc='upper left', bbox_to_anchor=(1.01, 1.0), ncol=1)
